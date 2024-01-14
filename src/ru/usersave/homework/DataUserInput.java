@@ -32,6 +32,7 @@ public class DataUserInput implements Serializable {
         System.out.println("Введите строку в формате Фамилия Имя Отчество датарождения(dd.mm.yyyy пол(f/m)" +
                 " номертелефона через пробел ");
         String userInput = scan.nextLine();
+        scan.close();
         ArrayList<String> userInfo = new ArrayList<>(List.of(userInput.split(" ")));
 
         if (userInfo.size() < 6) throw new RuntimeException("Error = -1 Вы ввели меньшее количество " +
